@@ -30,18 +30,19 @@ int sides = 0;
 		int angle = (360/8);
 		//  COUNT. Make another int variable to count how many times the loop has repeated
 		//         Set its start value to zero.
-		int count =0; 
+		int count =1; 
 
 		//  LOOP. Start a while loop to repeat the DRAW, TURN, and INCREASE COUNT code 200 times. 
-		while(count<200);
+		while(count<200){
 				//  DRAW.  Make the robot move the amount in your count variable
-		
+		rob.move(count);
 				//  TURN.  Turn the robot the amount in your angle variable + 1
-
+rob.turn(count+1);
 				//  INCREASE COUNT. Increase the count by 1
-		
+		count+=1;
+		rob.setPenColor(count+1,green,blue);
 		//  End the while loop here
-
+		}
 		//  Now hide the robot so you can see the pattern it has drawn.
 		
 		//  Run the program. 
